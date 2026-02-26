@@ -7,6 +7,10 @@ pipeline {
         cron('H/5 * * * 4')
     }
 
+    tools {
+        jdk 'JDK17'
+    }
+
     stages {
         // Stage runs first to check out the code from the repository
         stage('Checkout') {
